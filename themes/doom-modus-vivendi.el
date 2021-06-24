@@ -2,34 +2,34 @@
 (require 'doom-themes)
 
 ;;
-(defgroup doom-zenburn-theme nil
-  "Options for the `doom-zenburn' theme."
+(defgroup doom-modus-vivendi-theme nil
+  "Options for the `doom-modus-vivendi' theme."
   :group 'doom-themes)
 
-(defcustom doom-zenburn-brighter-modeline nil
+(defcustom doom-modus-vivendi-brighter-modeline nil
   "If non-nil, more vivid colors will be used to style the mode-line."
-  :group 'doom-zenburn-theme
+  :group 'doom-modus-vivendi-theme
   :type 'boolean)
 
-(defcustom doom-zenburn-brighter-comments nil
+(defcustom doom-modus-vivendi-brighter-comments nil
   "If non-nil, comments will be highlighted in more vivid colors."
-  :group 'doom-zenburn-theme
+  :group 'doom-modus-vivendi-theme
   :type 'boolean)
 
-(defcustom doom-zenburn-comment-bg doom-zenburn-brighter-comments
+(defcustom doom-modus-vivendi-comment-bg doom-modus-vivendi-brighter-comments
   "If non-nil, comments will have a subtle, darker background.
 Enhances their legibility."
-  :group 'doom-zenburn-theme
+  :group 'doom-modus-vivendi-theme
   :type 'boolean)
 
-(defcustom doom-zenburn-padded-modeline doom-themes-padded-modeline
+(defcustom doom-modus-vivendi-padded-modeline doom-themes-padded-modeline
   "If non-nil, adds a 4px padding to the mode-line.
 Can be an integer to determine the exact padding."
-  :group 'doom-zenburn-theme
+  :group 'doom-modus-vivendi-theme
   :type '(choice integer boolean))
 
 ;;
-(def-doom-theme doom-zenburn
+(def-doom-theme doom-modus-vivendi
   "An implementation of the popular Zenburn theme."
 
   ;; name        default   256       16
@@ -106,10 +106,10 @@ Can be an integer to determine the exact padding."
 
    ;; custom categories
    (hidden     `(,(car bg) "black" "black"))
-   (-modeline-bright doom-zenburn-brighter-modeline)
+   (-modeline-bright doom-modus-vivendi-brighter-modeline)
    (-modeline-pad
-    (when doom-zenburn-padded-modeline
-      (if (integerp doom-zenburn-padded-modeline) doom-zenburn-padded-modeline 4)))
+    (when doom-modus-vivendi-padded-modeline
+      (if (integerp doom-modus-vivendi-padded-modeline) doom-modus-vivendi-padded-modeline 4)))
 
    (modeline-fg     green+1)
    (modeline-fg-alt `(,(car fg-alt) ,@(cdr base6)))
@@ -132,7 +132,7 @@ Can be an integer to determine the exact padding."
    (font-lock-builtin-face :foreground fg :weight 'bold)
    (font-lock-comment-delimiter-face :foreground green-2)
    ((font-lock-comment-face &override)
-    :background (if doom-zenburn-comment-bg (doom-lighten bg 0.05)))
+    :background (if doom-modus-vivendi-comment-bg (doom-lighten bg 0.05)))
    (font-lock-constant-face :foreground green+4)
    (font-lock-doc-face :foreground green+2)
    (font-lock-type-face :foreground blue-1)
@@ -339,4 +339,4 @@ Can be an integer to determine the exact padding."
   ;;;; Base theme variable overrides-
   ())
 
-;;; doom-zenburn-theme.el ends here
+;;; doom-modus-vivendi-theme.el ends here
